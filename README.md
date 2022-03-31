@@ -23,7 +23,7 @@ $ python3 spring-core-rce.py -h
 `----' `-'   `-'-' `-'`-' `-'`----'     `----' `---' `-'-' `----'     `-'-' `----'`----'
 
 
-                                                 Spring framework Core 0day RCE
+                                                 Spring framework Core RCE
                                                                   By:K3rwin
 usage: spring-core-rce.py [-h] [-u URL] [-s SYSTEM]
 
