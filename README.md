@@ -27,7 +27,7 @@ $ python3 spring-core-rce.py -h
                                                                   By:K3rwin
 usage: spring-core-rce.py [-h] [-u URL] [-s SYSTEM]
 
-Spring framework Core 0day RCE 帮助指南
+Spring framework Core RCE 帮助指南
 
 optional arguments:
   -h, --help            show this help message and exit
