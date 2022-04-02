@@ -1,4 +1,4 @@
-# Spring Core RCE
+# Spring Core RCE/CVE-2022-22965
 
 > 影响范围：JDK>=9 的spring框架及衍生框架
 >

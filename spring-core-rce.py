@@ -17,7 +17,7 @@ def title():
 .-._} }| |-' | } \ | }| }\  {| }-`}{___}| },-.\ '-} /| } \ } '__}{___}| } \ | },-.} '__} 
 `----' `-'   `-'-' `-'`-' `-'`----'     `----' `---' `-'-' `----'     `-'-' `----'`----'                                                                                        
 """)
-    print(Fore.YELLOW + '\t\t\t\t\t\t Spring framework Core RCE\r\n' + '\t\t\t\t\t\t\t\t  ' + Fore.LIGHTBLUE_EX + 'By:K3rwin')  
+    print(Fore.YELLOW + '\t\t\t\t\t Spring framework Core RCE CVE-2022-22965\r\n' + '\t\t\t\t\t\t\t\t  ' + Fore.LIGHTBLUE_EX + 'By:K3rwin')  
 
 
 def get_args():
